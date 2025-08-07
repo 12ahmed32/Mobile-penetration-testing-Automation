@@ -1,0 +1,9 @@
+If <intent-filter> contains BROWSABLE + VIEW → link-triggered activity
+    └─> Check scheme:
+        ├─> If custom scheme (e.g., myapp://) → Deep Link → Hijackable ✅
+        └─> If http(s):
+             ├─> If autoVerify="true" → App Link → Not hijackable ❌
+             └─> If no autoVerify:
+                   ├─> Check minSdkVersion:
+                   │     ├─< 31 → Android < 12 supported → Hijackable ✅
+                   │     └─≥ 31 → Android 12+ only → Not hijackable ❌
