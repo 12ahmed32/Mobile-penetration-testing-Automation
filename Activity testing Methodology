@@ -1,0 +1,2 @@
+check the manifest file for exported activities -> can be explicitily exported by exported=true or implicitily exported by having an intent filter in both cases : 
+the tool will detect tha exported activity , permissions needed to launch the activity , the permission's protection level to determine if still exploitable or not and then suggest the adb command POC  
