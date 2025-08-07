@@ -3,12 +3,4 @@ web link -> if android < 12 apps same deep link with just http/https scheme hija
 app link -> web link with autoverify if implemented correct it is safe if not it just web link , do the same test process as web link check if the app support android < 12 prepare emulator and try to make your poc app intercept the link
 so we make our poc app and trigger the link or send an intent via adb for speed
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Test Step                                        | Deep Link               | Web Link                   | App Link                                             |
-| ------------------------------------------------ | ----------------------- | -------------------------- | -----------------------------------------------------|
-| 1. Build a malicious app with same intent filter | ✅                       | ✅                          | ✅                                                |
-| 2. Install malicious app + victim app            | ✅                       | ✅                          | ✅                                                |
-| 3. Trigger link (via ADB or browser)             | App has priority        | Depends on Android version | Verified app opens if verification succeeds           |
-| 4. Hijack success                                | ✅ if no signature check | ✅ on Android < 12          | ❌ unless verification fails                      |
-| 5. Emulator test (force old Android version)     | ✅                       | ✅ (bypass possible)        | ✅ (bypass possible)                              |
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
